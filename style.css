@@ -9,6 +9,8 @@
 body{
     font-family: 'Poppins', sans-serif;
     color: #3A3A3A;
+    margin: 0;
+    padding: 0;
 }
 .container {
     padding: 44px 90px;
@@ -57,13 +59,9 @@ hr{
     margin-bottom: 7px;
 }
 .hero-img {
-    background-color: #ededed52;
-    padding: 17px 15px;
-    border-radius: 50%;
-    border: 3px solid #f1e4ff;
-}
-.hero-img img{
-   width: 400px;
+    background: url(images/Circle\ design.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .icon-right {
     margin-left: 11px;
@@ -87,7 +85,7 @@ hr{
     padding: 24px;
     grid-row-gap: 30px;
 }
-.collection-heading{
+.site-heading{
     text-align: center;
     font-size: 33px;
     margin-bottom: 0;
@@ -95,7 +93,7 @@ hr{
 }
 .product {
     width: 301px;
-    height: 450px;
+    height: 430px;
     padding: 21px 17px; 
     border-radius: 7px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -105,6 +103,7 @@ hr{
     font-size: 28px;
     font-weight: 500;
     margin-bottom: 0;
+    margin-top: 8px;
 }
 .product-details h4 {
     font-size: 24px;
@@ -130,5 +129,74 @@ hr{
     font-weight: 500;
     width: 200px;
 }
-
-
+.see-more h4{
+    text-align: end;
+    margin-right: 60px;
+    color: #E02C6DDE;
+}
+/*---------------------------
+    Featured products
+--------------------------- */
+.Featured-section {
+    background-color: #f9f9f9;
+    padding: 60px 0px;
+}
+.Featured-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Featured-img img {
+    width: 510px;
+}
+.Featured-content h3 {
+    color: #E02C6D;
+    font-size: 24px;
+}
+.Featured-content h5 {
+    font-size: 15px;
+    font-weight: 500;
+}
+.Featured-content ul {
+    margin-bottom: 27px;
+}
+.cart-button {
+    margin-left: 23px;
+    padding: 9px 15px;
+    background-color: #E02C6D;
+    border-radius: 12px 0px;
+    color: #fff;
+}
+.cart-button:hover{
+    background-color: #94083c;
+}
+/*---------------------------
+       Footer Section
+--------------------------- */
+footer.footer-section {
+    padding: 37px 0px;
+    background-color: #0A0826;
+}
+.footer-section {
+    text-align: center;
+}
+.footer-content h3{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 11px;
+}
+.footer-content p {
+    color: #82A5C0;
+    font-weight: 100;
+    font-size: 14px;
+}
+.social-area i {
+    color: #fff;
+    background-color: #22203B;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 6px;
+}
+.social-area i:hover{
+    background-color: #161527;
+}
