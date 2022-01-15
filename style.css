@@ -14,6 +14,7 @@ body{
 }
 .container {
     padding: 44px 90px;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -39,10 +40,6 @@ hr{
 .main-button:hover{
     background-color: #9e0f43; 
 }
-
-
-
-
 /*---------------------------
        Hero section
 --------------------------- */
@@ -58,10 +55,19 @@ hr{
     font-size: 52px;
     margin-bottom: 7px;
 }
+.hero-content p {
+    width: 552px;
+}
 .hero-img {
     background: url(images/Circle\ design.svg);
     background-size: contain;
     background-repeat: no-repeat;
+}
+.hero-img img{
+    transition: transform 5s;
+}
+.hero-img img:hover {
+    transform: rotate(312deg);
 }
 .icon-right {
     margin-left: 11px;
@@ -70,12 +76,10 @@ hr{
        Brand Section
 --------------------------- */
 .brand-area {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0px 52px;
 }
-
-
 /*---------------------------
     Popular Collection
 --------------------------- */
@@ -84,6 +88,7 @@ hr{
     grid-template-columns: repeat(3, 1fr);
     padding: 24px;
     grid-row-gap: 30px;
+    margin-left: 30px;
 }
 .site-heading{
     text-align: center;
@@ -93,7 +98,7 @@ hr{
 }
 .product {
     width: 301px;
-    height: 430px;
+    height: 457px;
     padding: 21px 17px; 
     border-radius: 7px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -127,7 +132,7 @@ hr{
     color: #787885;
     margin-top: 10px;
     font-weight: 500;
-    width: 200px;
+    width: 270px;
 }
 .see-more h4{
     text-align: end;
@@ -199,4 +204,88 @@ footer.footer-section {
 }
 .social-area i:hover{
     background-color: #161527;
+}
+
+/*---------------------------
+        Media Query
+----------------------------  */
+/* Mobile Devices */
+@media only screen and (max-width:688px){
+    .container {
+        padding: 44px 20px;
+    }
+    .hero-contents {
+        flex-direction: column;
+    }
+    .hero-content h1 {
+        font-size: 37px;
+        text-align: center;
+    }
+    .hero-content p {
+        text-align: center;
+        font-size: 19px;
+        width: 366px;
+    }
+    .main-button {
+        margin-left: 85px;
+    }
+    .hero-img img {
+        width: 96%;
+    }
+    .hero-img {
+        background: url(images/Circle\ design.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 31px;
+        margin-top: 50px;
+    }
+    .brand-area {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 17px;
+        grid-column-gap: 26px;
+        grid-row-gap: 33px;
+    }
+    .brand-img img {
+        width: 67px;
+    }
+    .collections {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 17px;
+        padding: 0;
+    }
+    .Featured-area {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Featured-img img {
+        width: 344px;
+    }
+}
+/* Teblet divices */
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    .container {
+        padding: 44px 50px;
+        overflow: hidden;
+    }
+    .hero-img {
+        margin-top: 64px;
+    }
+    .hero-contents {
+        flex-direction: column;
+    }
+    .brand-area {
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 26px;
+        grid-row-gap: 33px;
+        padding: 0;
+    }
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        padding: 0;
+    }
+    .Featured-area {
+        flex-direction: column;
+    }
 }
